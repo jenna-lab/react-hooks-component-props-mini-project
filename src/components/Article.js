@@ -1,13 +1,12 @@
 import React from "react";
 
-const Article = (props) =>{
-    const date = props.date || "January 1, 1970";
+const Article = ({time,title,preview,date}) =>{
 
     return (
         <article>
-            <h3>{props.title}</h3>
-            <small>{date}</small>
-            <p>{props.preview}</p>
+            <h3>{title}</h3>
+            <small>{date || "January 1, 1970"}. {time}</small>
+            <p>{preview}</p>
         </article>
     )
 }
